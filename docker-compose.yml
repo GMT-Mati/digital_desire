@@ -32,6 +32,13 @@ services:
     ports:
       - 127.0.0.1:8012:8012
 
+  selenium-tests:
+    build: ./selenium-tests
+    depends_on:
+      - selenium
+
+  selenium:
+    image: selenium/standalone-chrome
 
 
   # sendria:
